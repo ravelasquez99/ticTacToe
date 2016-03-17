@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		D891BEB81C9B62750096F7B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D891BEB71C9B62750096F7B6 /* main.m */; };
 		D891BEBB1C9B62750096F7B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D891BEBA1C9B62750096F7B6 /* AppDelegate.m */; };
-		D891BEBE1C9B62750096F7B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D891BEBD1C9B62750096F7B6 /* ViewController.m */; };
 		D891BEC11C9B62750096F7B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D891BEBF1C9B62750096F7B6 /* Main.storyboard */; };
 		D891BEC31C9B62750096F7B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D891BEC21C9B62750096F7B6 /* Assets.xcassets */; };
 		D891BEC61C9B62750096F7B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D891BEC41C9B62750096F7B6 /* LaunchScreen.storyboard */; };
+		D891BECF1C9B66A00096F7B6 /* TicTacToeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D891BECE1C9B66A00096F7B6 /* TicTacToeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		D891BEB71C9B62750096F7B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D891BEB91C9B62750096F7B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D891BEBA1C9B62750096F7B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D891BEBC1C9B62750096F7B6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D891BEBD1C9B62750096F7B6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D891BEC01C9B62750096F7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D891BEC21C9B62750096F7B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D891BEC51C9B62750096F7B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D891BEC71C9B62750096F7B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D891BECD1C9B66A00096F7B6 /* TicTacToeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TicTacToeViewController.h; path = ../TicTacToeViewController.h; sourceTree = "<group>"; };
+		D891BECE1C9B66A00096F7B6 /* TicTacToeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TicTacToeViewController.m; path = ../TicTacToeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 			children = (
 				D891BEB91C9B62750096F7B6 /* AppDelegate.h */,
 				D891BEBA1C9B62750096F7B6 /* AppDelegate.m */,
-				D891BEBC1C9B62750096F7B6 /* ViewController.h */,
-				D891BEBD1C9B62750096F7B6 /* ViewController.m */,
+				D891BECD1C9B66A00096F7B6 /* TicTacToeViewController.h */,
+				D891BECE1C9B66A00096F7B6 /* TicTacToeViewController.m */,
 				D891BEBF1C9B62750096F7B6 /* Main.storyboard */,
 				D891BEC21C9B62750096F7B6 /* Assets.xcassets */,
 				D891BEC41C9B62750096F7B6 /* LaunchScreen.storyboard */,
@@ -149,9 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D891BEBE1C9B62750096F7B6 /* ViewController.m in Sources */,
 				D891BEBB1C9B62750096F7B6 /* AppDelegate.m in Sources */,
 				D891BEB81C9B62750096F7B6 /* main.m in Sources */,
+				D891BECF1C9B66A00096F7B6 /* TicTacToeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
