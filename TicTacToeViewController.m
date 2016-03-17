@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *button8;
 @property (weak, nonatomic) IBOutlet UIButton *button9;
 @property (weak, nonatomic) IBOutlet UILabel *currentTurnLabel;
+
 @property (weak, nonatomic) IBOutlet UILabel *winnerOrTieLabel;
 
 @end
