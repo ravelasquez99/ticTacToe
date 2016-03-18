@@ -70,14 +70,23 @@ NSString *OIsUp = @"O is up!";
 #pragma mark KEVIN's CHANGES
 
 - (IBAction)buttonPressed:(UIButton *)sender {
+    
+    
+    //if player is x
     if (self.xIsCurrentTurn) {
-        [self.button1 setImage:self.blueX forState:UIControlStateNormal];
+        
+        sender.titleLabel.text = @"X";
         sender.enabled = NO;
         [self roundCounter];
         [self changePlayerTurn];
-//        if (self.anyWinner) {
-//            [self showWinner:@"X"];
-//        }
+        
+        if (self.anyWinner) {
+            [self showWinner:@"X"];
+            
+            return;
+                }
+        
+        // if player is O
     }else {
         [self.button1 setTitle:@"O:" forState:UIControlStateNormal];
         sender.enabled = NO;
@@ -135,6 +144,29 @@ NSString *OIsUp = @"O is up!";
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // after every round, call this method to double check if we have a winner or not
 -(BOOL)anyWinner{
     //need to add something here to prevent empty boxes setting this to true. ie. when roundCount is at least 5 (since it takes 5 turns before someone can actually win)
@@ -144,34 +176,29 @@ NSString *OIsUp = @"O is up!";
     NSLog(@"%@", titleLabelText);
 
     
-    
     //if Button 1 is NOT empty, look for winners involving button 1
     if (self.button1.titleLabel.text != nil){
         //top row
-        if (((self.button1.titleLabel.text == self.button2.titleLabel.text) && (self.button1.titleLabel.text == self.button3.titleLabel.text)) ||
-            //left column
-             ((self.button1.titleLabel.text == self.button4.titleLabel.text) && (self.button1.titleLabel.text == self.button7.titleLabel.text))) {
-            NSLog(@"button 1 calc");
-            return YES;
-        }
-    }
-    
-    
-    //if Button 5 is NOT empty, look for winners involving button 5
-    else if (self.button5.titleLabel.text != nil){
+        (([self.button1.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString: self.button3.titleLabel.text])) ||
+        //middle row
+        (([self.button5.titleLabel.text isEqualToString: self.button4.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button6.titleLabel.text])) ||
+        //bottom row
+        (([self.button9.titleLabel.text isEqualToString: self.button8.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString: self.button7.titleLabel.text])) ||
+        
         //middle column
-        if (((self.button5.titleLabel.text == self.button2.titleLabel.text) && (self.button5.titleLabel.text == self.button8.titleLabel.text)) ||
-            //middle row
-            ((self.button5.titleLabel.text == self.button4.titleLabel.text) && (self.button5.titleLabel.text == self.button6.titleLabel.text)) ||
-            //1 to 9 diagonal
-            ((self.button5.titleLabel.text == self.button1.titleLabel.text) && (self.button5.titleLabel.text == self.button9.titleLabel.text)) ||
-            //3 to 7 diagonal
-            ((self.button5.titleLabel.text == self.button3.titleLabel.text) && (self.button5.titleLabel.text == self.button7.titleLabel.text))) {
-            NSLog(@"button 5 calc");
-            return YES;
-
-        }
-    }
+        (([self.button5.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button8.titleLabel.text])) ||
+        //left column
+        (([self.button1.titleLabel.text isEqualToString:self.button4.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString:self.button7.titleLabel.text])) ||
+        //right column
+        (([self.button9.titleLabel.text isEqualToString: self.button6.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString:self.button3.titleLabel.text])) ||
+        
+        //1 to 9 diagonal
+        (([self.button5.titleLabel.text isEqualToString: self.button1.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button9.titleLabel.text])) ||
+        //3 to 7 diagonal
+        (([self.button5.titleLabel.text isEqualToString:self.button3.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button7.titleLabel.text]));
+         {
+        return YES;
+         }}
     
     
     //if Button 9 is NOT empty, look for winners involving button 9
