@@ -24,14 +24,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yb6-uG-kpQ">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3M-ow-bAF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4C-F7-up9">
                                         <rect key="frame" x="187" y="0.0" width="186" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMz-GR-KfH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-IM-cXr">
                                         <rect key="frame" x="373" y="0.0" width="187" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khd-7A-4En"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -44,14 +53,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYp-ed-ZAx">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ENx-pT-Nfy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O61-QK-Ctn">
                                         <rect key="frame" x="187" y="0.0" width="186" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CB5-xY-7LI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6p-pR-zb5">
                                         <rect key="frame" x="373" y="0.0" width="187" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RQ9-GX-GPV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -64,14 +82,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXo-Nt-3mv">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Nf-Mq-esV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sC-Uj-Jd0">
                                         <rect key="frame" x="187" y="0.0" width="186" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhF-UH-Ewe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoK-Ds-9Lb">
                                         <rect key="frame" x="373" y="0.0" width="187" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="onTicTacToeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xg-xG-rJi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -117,9 +144,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button1" destination="yb6-uG-kpQ" id="rtv-LN-ga3"/>
-                        <outlet property="button2" destination="X4C-F7-up9" id="yHD-Nm-fCB"/>
-                        <outlet property="button3" destination="kG7-IM-cXr" id="xCJ-U2-6AQ"/>
                         <outlet property="button4" destination="AYp-ed-ZAx" id="a1i-sA-LkH"/>
                         <outlet property="button5" destination="O61-QK-Ctn" id="vHO-Hh-qE6"/>
                         <outlet property="button6" destination="Z6p-pR-zb5" id="MwH-iv-MKM"/>
