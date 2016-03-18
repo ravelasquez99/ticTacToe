@@ -56,6 +56,7 @@ NSString *OIsUp = @"O is up!";
     }
 }
 
+//method call to show the winner
 -(void)showWinner:(NSString *)winner{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle: [NSString stringWithFormat:@"%@ won the game!", winner] message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
