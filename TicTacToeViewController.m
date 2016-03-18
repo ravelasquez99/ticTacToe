@@ -66,23 +66,23 @@ NSString *OIsUp = @"O is up!";
     if (
         
         //top row
-        ((self.button1.titleLabel.text == self.button2.titleLabel.text) && (self.button1.titleLabel.text == self.button3.titleLabel.text)) ||
+        (([self.button1.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString: self.button3.titleLabel.text])) ||
         //middle row
-        ((self.button5.titleLabel.text == self.button4.titleLabel.text) && (self.button5.titleLabel.text == self.button6.titleLabel.text)) ||
+        (([self.button5.titleLabel.text isEqualToString: self.button4.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button6.titleLabel.text])) ||
         //bottom row
-        ((self.button9.titleLabel.text == self.button8.titleLabel.text) && (self.button9.titleLabel.text == self.button7.titleLabel.text)) ||
+        (([self.button9.titleLabel.text isEqualToString: self.button8.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString: self.button7.titleLabel.text])) ||
         
         //middle column
-        ((self.button5.titleLabel.text == self.button2.titleLabel.text) && (self.button5.titleLabel.text == self.button8.titleLabel.text)) ||
+        (([self.button5.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button8.titleLabel.text])) ||
         //left column
-        ((self.button1.titleLabel.text == self.button4.titleLabel.text) && (self.button1.titleLabel.text == self.button7.titleLabel.text)) ||
+        (([self.button1.titleLabel.text isEqualToString:self.button4.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString:self.button7.titleLabel.text])) ||
         //right column
-        ((self.button9.titleLabel.text == self.button6.titleLabel.text) && (self.button9.titleLabel.text == self.button3.titleLabel.text)) ||
+        (([self.button9.titleLabel.text isEqualToString: self.button6.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString:self.button3.titleLabel.text])) ||
         
         //1 to 9 diagonal
-        ((self.button5.titleLabel.text == self.button1.titleLabel.text) && (self.button5.titleLabel.text == self.button9.titleLabel.text)) ||
+        (([self.button5.titleLabel.text isEqualToString: self.button1.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button9.titleLabel.text])) ||
         //3 to 7 diagonal
-        ((self.button5.titleLabel.text == self.button3.titleLabel.text) && (self.button5.titleLabel.text == self.button7.titleLabel.text))
+        (([self.button5.titleLabel.text isEqualToString:self.button3.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button7.titleLabel.text]))
         ) {
         return YES;
     }
