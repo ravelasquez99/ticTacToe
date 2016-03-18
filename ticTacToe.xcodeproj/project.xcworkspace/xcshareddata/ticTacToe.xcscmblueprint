@@ -4,12 +4,12 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "5C72276CC4FE6942AC45F4AD11DCAC589B3A4D24" : 0,
+    "EAE2604E265AF5503AC1CE73DCE53F050CBD1148" : 0,
     "6D3767B118DB393D897FDD4CA16A71BC1D7E2337" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "76DE2484-8C3C-4D89-8380-8D60A2758945",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "5C72276CC4FE6942AC45F4AD11DCAC589B3A4D24" : "",
+    "EAE2604E265AF5503AC1CE73DCE53F050CBD1148" : "",
     "6D3767B118DB393D897FDD4CA16A71BC1D7E2337" : "ticTacToe\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ticTacToe",
@@ -17,14 +17,14 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ticTacToe.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/plugh4\/mm-githubtest.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5C72276CC4FE6942AC45F4AD11DCAC589B3A4D24"
-    },
-    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ravelasquez99\/ticTacToe.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6D3767B118DB393D897FDD4CA16A71BC1D7E2337"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/plugh4\/mm-githubtest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EAE2604E265AF5503AC1CE73DCE53F050CBD1148"
     }
   ]
 }
