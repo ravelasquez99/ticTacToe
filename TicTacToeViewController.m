@@ -59,8 +59,35 @@ NSString *OIsUp = @"O is up!";
 }
 
 
-
+-(BOOL)anyWinner{
     
+    //need to add something here to prevent empty boxes setting this to true. ie. when roundCount is at least 5 (since it takes 5 turns before someone can actually win)
+    if (
+        
+        //top row
+        ((self.button1.titleLabel.text == self.button2.titleLabel.text) && (self.button1.titleLabel.text == self.button3.titleLabel.text)) ||
+        //middle row
+        ((self.button5.titleLabel.text == self.button4.titleLabel.text) && (self.button5.titleLabel.text == self.button6.titleLabel.text)) ||
+        //bottom row
+        ((self.button9.titleLabel.text == self.button8.titleLabel.text) && (self.button9.titleLabel.text == self.button7.titleLabel.text)) ||
+        
+        //middle column
+        ((self.button5.titleLabel.text == self.button2.titleLabel.text) && (self.button5.titleLabel.text == self.button8.titleLabel.text)) ||
+        //left column
+        ((self.button1.titleLabel.text == self.button4.titleLabel.text) && (self.button1.titleLabel.text == self.button7.titleLabel.text)) ||
+        //right column
+        ((self.button9.titleLabel.text == self.button6.titleLabel.text) && (self.button9.titleLabel.text == self.button3.titleLabel.text)) ||
+        
+        //1 to 9 diagonal
+        ((self.button5.titleLabel.text == self.button1.titleLabel.text) && (self.button5.titleLabel.text == self.button9.titleLabel.text)) ||
+        //3 to 7 diagonal
+        ((self.button5.titleLabel.text == self.button3.titleLabel.text) && (self.button5.titleLabel.text == self.button7.titleLabel.text))
+        ) {
+        return YES;
+    }
+    return NO;
+}
+
 
 
 
