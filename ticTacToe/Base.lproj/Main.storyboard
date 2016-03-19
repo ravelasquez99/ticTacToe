@@ -71,7 +71,7 @@
                                     <segment title="5 x 5"/>
                                 </segments>
                                 <connections>
-                                    <action selector="gameSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="WKT-s5-WfF"/>
+                                    <action selector="gameSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="vE5-yP-Pw0"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AN-e8-35I">
@@ -594,7 +594,6 @@
                         <outlet property="button8" destination="iiC-4z-N9D" id="y5r-am-0u7"/>
                         <outlet property="button9" destination="RO2-yQ-DOv" id="Qdo-49-Smw"/>
                         <outlet property="currentTurnLabel" destination="MvZ-EH-6m1" id="LLB-xc-NO0"/>
-                        <outlet property="gameselectedOutlet" destination="6Qa-DT-me5" id="Wbf-Vq-fAK"/>
                         <outlet property="winnerOrTieLabel" destination="d71-mr-HGf" id="mVw-VO-Ycd"/>
                     </connections>
                 </viewController>

@@ -54,6 +54,7 @@
 NSString *xIsUp = @"X is up!";
 NSString *OIsUp = @"O is up!";
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //set current player turn to have x starting
@@ -100,21 +101,13 @@ NSString *OIsUp = @"O is up!";
         [self roundCounter];
         [self changePlayerTurn];
         
-        if (self.anyWinner) {
-            [self showWinner:@"X"];
-            
-            return;
-                }
-        
         // if player is O
     }else {
         [self.button1 setTitle:@"O:" forState:UIControlStateNormal];
         sender.enabled = NO;
         [self roundCounter];
         [self changePlayerTurn];
-        if (self.anyWinner) {
-            [self showWinner:@"O"];
-        }
+      
     }
 }
 
@@ -251,6 +244,8 @@ NSString *OIsUp = @"O is up!";
 }
 
 #pragma game settings method
+
+
 
 - (IBAction)gameSelected:(UISegmentedControl *)sender {
     if (sender.selectedSegmentIndex == 0) {
