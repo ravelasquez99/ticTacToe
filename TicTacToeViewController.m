@@ -5,12 +5,13 @@
 //  Created by Richard Velazquez on 3/17/16.
 //  Copyright © 2016 Richard Velazquez. All rights reserved.
 //
-
+#pragma Top of file
 #import "TicTacToeViewController.h"
+
 
 @interface TicTacToeViewController ()
 
-
+#pragma properties - buttons
 @property (weak, nonatomic) IBOutlet UIButton *button1;
 @property (weak, nonatomic) IBOutlet UIButton *button2;
 @property (weak, nonatomic) IBOutlet UIButton *button3;
@@ -20,14 +21,32 @@
 @property (weak, nonatomic) IBOutlet UIButton *button7;
 @property (weak, nonatomic) IBOutlet UIButton *button8;
 @property (weak, nonatomic) IBOutlet UIButton *button9;
+@property (weak, nonatomic) IBOutlet UIButton *button10;
+@property (weak, nonatomic) IBOutlet UIButton *button11;
+@property (weak, nonatomic) IBOutlet UIButton *button12;
+@property (weak, nonatomic) IBOutlet UIButton *button13;
+@property (weak, nonatomic) IBOutlet UIButton *button14;
+@property (weak, nonatomic) IBOutlet UIButton *button15;
+@property (weak, nonatomic) IBOutlet UIButton *button16;
+@property (weak, nonatomic) IBOutlet UIButton *button17;
+@property (weak, nonatomic) IBOutlet UIButton *button18;
+@property (weak, nonatomic) IBOutlet UIButton *button19;
+@property (weak, nonatomic) IBOutlet UIButton *button20;
+@property (weak, nonatomic) IBOutlet UIButton *button21;
+@property (weak, nonatomic) IBOutlet UIButton *button22;
+@property (weak, nonatomic) IBOutlet UIButton *button23;
+@property (weak, nonatomic) IBOutlet UIButton *button24;
+@property (weak, nonatomic) IBOutlet UIButton *button25;
 
 
+#pragma labels and other properties
 @property (weak, nonatomic) IBOutlet UILabel *currentTurnLabel;
 @property (weak, nonatomic) IBOutlet UILabel *winnerOrTieLabel;
 @property BOOL xIsCurrentTurn;
 @property int currentRound;
 @property UIImage *blueX;
 @property UIImage *redO;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gameselectedOutlet;
 
 @end
 
@@ -38,9 +57,10 @@ NSString *OIsUp = @"O is up!";
 - (void)viewDidLoad {
     [super viewDidLoad];
     //set current player turn to have x starting
-    [self gameReset];
+    [self.gameselectedOutlet setSelectedSegmentIndex:0];
     self.redO = [UIImage imageNamed:@"redO"];
     self.blueX = [UIImage imageNamed:@"blueX"];
+    [self gameSelected:self.gameselectedOutlet];
 
 }
 
@@ -108,24 +128,33 @@ NSString *OIsUp = @"O is up!";
 
 // game reset
 -(void)gameReset {
-    [self.button1 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b1");
-    [self.button2 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b2");
-    [self.button3 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b3");
-    [self.button4 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b4");
-    [self.button5 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b5");
-    [self.button6 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b6");
-    [self.button7 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b7");
-    [self.button8 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b8");
-    [self.button9 setTitle:nil forState:UIControlStateNormal];
-    NSLog(@"b9");
+//    [self.button1 setTitle:nil forState:UIControlStateNormal];
+//    [self.button2 setTitle:nil forState:UIControlStateNormal];
+//    [self.button3 setTitle:nil forState:UIControlStateNormal];
+//    [self.button4 setTitle:nil forState:UIControlStateNormal];
+//    [self.button5 setTitle:nil forState:UIControlStateNormal];
+//    [self.button6 setTitle:nil forState:UIControlStateNormal];
+//    [self.button7 setTitle:nil forState:UIControlStateNormal];
+//    [self.button8 setTitle:nil forState:UIControlStateNormal];
+//    [self.button9 setTitle:nil forState:UIControlStateNormal];
+//    [self.button10 setTitle:nil forState:UIControlStateNormal];
+//    [self.button11 setTitle:nil forState:UIControlStateNormal];
+//    [self.button12 setTitle:nil forState:UIControlStateNormal];
+//    [self.button13 setTitle:nil forState:UIControlStateNormal];
+//    [self.button14 setTitle:nil forState:UIControlStateNormal];
+//    [self.button15 setTitle:nil forState:UIControlStateNormal];
+//    [self.button16 setTitle:nil forState:UIControlStateNormal];
+//    [self.button17 setTitle:nil forState:UIControlStateNormal];
+//    [self.button18 setTitle:nil forState:UIControlStateNormal];
+//    [self.button19 setTitle:nil forState:UIControlStateNormal];
+//    [self.button20 setTitle:nil forState:UIControlStateNormal];
+//    [self.button21 setTitle:nil forState:UIControlStateNormal];
+//    [self.button22 setTitle:nil forState:UIControlStateNormal];
+//    [self.button23 setTitle:nil forState:UIControlStateNormal];
+//    [self.button24 setTitle:nil forState:UIControlStateNormal];
+//    [self.button25 setTitle:nil forState:UIControlStateNormal];
+    
+  
 
     self.button1.enabled = YES;
     self.button2.enabled = YES;
@@ -136,35 +165,29 @@ NSString *OIsUp = @"O is up!";
     self.button7.enabled = YES;
     self.button8.enabled = YES;
     self.button9.enabled = YES;
+    self.button10.enabled = YES;
+    self.button11.enabled = YES;
+    self.button12.enabled = YES;
+    self.button13.enabled = YES;
+    self.button14.enabled = YES;
+    self.button15.enabled = YES;
+    self.button16.enabled = YES;
+    self.button17.enabled = YES;
+    self.button18.enabled = YES;
+    self.button19.enabled = YES;
+    self.button20.enabled = YES;
+    self.button21.enabled = YES;
+    self.button22.enabled = YES;
+    self.button23.enabled = YES;
+    self.button24.enabled = YES;
+    self.button25.enabled = YES;
+ 
 
     self.xIsCurrentTurn = YES;
     self.currentTurnLabel.text = xIsUp;
     self.currentRound = 0; //setting the round counter to 0 when starting the game
     NSLog(@"gameReset");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // after every round, call this method to double check if we have a winner or not
@@ -221,6 +244,99 @@ NSString *OIsUp = @"O is up!";
     
     return NO;
 }
+
+- (IBAction)gameSelected:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        [self threeByThreeGame];
+    }
+}
+
+#pragma game settings method
+
+-(void)threeByThreeGame {
+    //enabled + appeared buttons
+    [self.button1 setEnabled:YES];
+    [self.button1 setHidden:NO];
+    
+    [self.button2 setEnabled:YES];
+    [self.button2 setHidden:NO];
+    
+    [self.button3 setEnabled:YES];
+    [self.button3 setHidden:NO];
+    
+    [self.button6 setEnabled:YES];
+    [self.button6 setHidden:NO];
+    
+    [self.button7 setEnabled:YES];
+    [self.button7 setHidden:NO];
+    
+    [self.button8 setEnabled:YES];
+    [self.button8 setHidden:NO];
+    
+    [self.button11 setEnabled:YES];
+    [self.button9 setHidden:NO];
+    
+    [self.button12 setEnabled:YES];
+    [self.button12 setHidden:NO];
+    
+    [self.button13 setEnabled:YES];
+    [self.button13 setHidden:NO];
+    
+    
+    
+    //disabled buttons + hidden buttons
+    [self.button4 setHidden:YES];
+    [self.button4 setEnabled:NO];
+    
+    [self.button5 setHidden:YES];
+    [self.button5 setEnabled:NO];
+    
+    [self.button9 setHidden:YES];
+    [self.button9 setEnabled:NO];
+    
+    [self.button10 setHidden:YES];
+    [self.button10 setEnabled:NO];
+    
+    [self.button14 setHidden:YES];
+    [self.button14 setEnabled:NO];
+    
+    [self.button15 setHidden:YES];
+    [self.button15 setEnabled:NO];
+    
+    [self.button16 setHidden:YES];
+    [self.button16 setEnabled:NO];
+    
+    [self.button17 setHidden:YES];
+    [self.button17 setEnabled:NO];
+    
+    [self.button18 setHidden:YES];
+    [self.button18 setEnabled:NO];
+    
+    
+    [self.button19 setHidden:YES];
+    [self.button19 setEnabled:NO];
+    
+    [self.button20 setHidden:YES];
+    [self.button20 setEnabled:NO];
+    
+    [self.button24 setHidden:YES];
+    [self.button24 setEnabled:NO];
+    
+    [self.button21 setHidden:YES];
+    [self.button21 setEnabled:NO];
+    
+    [self.button22 setHidden:YES];
+    [self.button22 setEnabled:NO];
+    
+    [self.button23 setHidden:YES];
+    [self.button23 setEnabled:NO];
+    
+    [self.button25 setHidden:YES];
+    [self.button25 setEnabled:NO];
+    
+    
+}
+
 
 
 
