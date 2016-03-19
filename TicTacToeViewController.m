@@ -96,18 +96,30 @@ NSString *OIsUp = @"O is up!";
     //if player is x
     if (self.xIsCurrentTurn) {
         
-        sender.titleLabel.text = @"X";
-        sender.enabled = NO;
-        [self roundCounter];
-        [self changePlayerTurn];
+        
+        [sender setTitle:@"X" forState:UIControlStateNormal];
+        
+        //get back out
+        
+        [sender titleForState:[sender state]];
+        
+        //changesTurn
+        
+        self.xIsCurrentTurn = NO;
         
         // if player is O
     }else {
-        [self.button1 setTitle:@"O:" forState:UIControlStateNormal];
-        sender.enabled = NO;
-        [self roundCounter];
-        [self changePlayerTurn];
       
+        
+        [sender setTitle:@"O" forState:UIControlStateNormal];
+        
+        //get back out
+        
+        [sender titleForState:[sender state]];
+        
+        //changesTurn
+        
+        self.xIsCurrentTurn = YES;
     }
 }
 
