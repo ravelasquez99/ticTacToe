@@ -112,9 +112,9 @@ NSString *OIsUp = @"O is up!";
         sender.enabled = NO;
         [self roundCounter];
         [self changePlayerTurn];
-//        if (self.anyWinner) {
-//            [self showWinner:@"O"];
-//        }
+        if (self.anyWinner) {
+            [self showWinner:@"O"];
+        }
     }
 }
 
@@ -156,32 +156,32 @@ NSString *OIsUp = @"O is up!";
     
   
 
-    self.button1.enabled = YES;
-    self.button2.enabled = YES;
-    self.button3.enabled = YES;
-    self.button4.enabled = YES;
-    self.button5.enabled = YES;
-    self.button6.enabled = YES;
-    self.button7.enabled = YES;
-    self.button8.enabled = YES;
-    self.button9.enabled = YES;
-    self.button10.enabled = YES;
-    self.button11.enabled = YES;
-    self.button12.enabled = YES;
-    self.button13.enabled = YES;
-    self.button14.enabled = YES;
-    self.button15.enabled = YES;
-    self.button16.enabled = YES;
-    self.button17.enabled = YES;
-    self.button18.enabled = YES;
-    self.button19.enabled = YES;
-    self.button20.enabled = YES;
-    self.button21.enabled = YES;
-    self.button22.enabled = YES;
-    self.button23.enabled = YES;
-    self.button24.enabled = YES;
-    self.button25.enabled = YES;
- 
+//    self.button1.enabled = YES;
+//    self.button2.enabled = YES;
+//    self.button3.enabled = YES;
+//    self.button4.enabled = YES;
+//    self.button5.enabled = YES;
+//    self.button6.enabled = YES;
+//    self.button7.enabled = YES;
+//    self.button8.enabled = YES;
+//    self.button9.enabled = YES;
+//    self.button10.enabled = YES;
+//    self.button11.enabled = YES;
+//    self.button12.enabled = YES;
+//    self.button13.enabled = YES;
+//    self.button14.enabled = YES;
+//    self.button15.enabled = YES;
+//    self.button16.enabled = YES;
+//    self.button17.enabled = YES;
+//    self.button18.enabled = YES;
+//    self.button19.enabled = YES;
+//    self.button20.enabled = YES;
+//    self.button21.enabled = YES;
+//    self.button22.enabled = YES;
+//    self.button23.enabled = YES;
+//    self.button24.enabled = YES;
+//    self.button25.enabled = YES;
+// 
 
     self.xIsCurrentTurn = YES;
     self.currentTurnLabel.text = xIsUp;
@@ -193,67 +193,80 @@ NSString *OIsUp = @"O is up!";
 // after every round, call this method to double check if we have a winner or not
 -(BOOL)anyWinner{
     //need to add something here to prevent empty boxes setting this to true. ie. when roundCount is at least 5 (since it takes 5 turns before someone can actually win)
-    NSString *titleLabelText = [NSString new] ;
-    titleLabelText = self.button1.titleLabel.text;
+//    NSString *titleLabelText = [NSString new] ;
+//    titleLabelText = self.button1.titleLabel.text;
+//    
+//    NSLog(@"%@", titleLabelText);
+//
+//    
+//    //if Button 1 is NOT empty, look for winners involving button 1
+//    if (self.button1.titleLabel.text != nil){
+//        //top row
+//        (([self.button1.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString: self.button3.titleLabel.text])) ||
+//        //middle row
+//        (([self.button5.titleLabel.text isEqualToString: self.button4.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button6.titleLabel.text])) ||
+//        //bottom row
+//        (([self.button9.titleLabel.text isEqualToString: self.button8.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString: self.button7.titleLabel.text])) ||
+//        
+//        //middle column
+//        (([self.button5.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button8.titleLabel.text])) ||
+//        //left column
+//        (([self.button1.titleLabel.text isEqualToString:self.button4.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString:self.button7.titleLabel.text])) ||
+//        //right column
+//        (([self.button9.titleLabel.text isEqualToString: self.button6.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString:self.button3.titleLabel.text])) ||
+//        
+//        //1 to 9 diagonal
+//        (([self.button5.titleLabel.text isEqualToString: self.button1.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button9.titleLabel.text])) ||
+//        //3 to 7 diagonal
+//        (([self.button5.titleLabel.text isEqualToString:self.button3.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button7.titleLabel.text]));
+//         {
+//        return YES;
+//         }}
+//    
+//    
+//    //if Button 9 is NOT empty, look for winners involving button 9
+//    else if (self.button9.titleLabel.text != nil){
+//        //bottom row
+//        if (((self.button9.titleLabel.text == self.button8.titleLabel.text) && (self.button9.titleLabel.text == self.button7.titleLabel.text)) ||
+//            //right column
+//            ((self.button9.titleLabel.text == self.button6.titleLabel.text) && (self.button9.titleLabel.text == self.button3.titleLabel.text))) {
+//            NSLog(@"button 9 calc");
+//            return YES;
+//        }
+//    }
+//    
+//
+//    // if all the possible combinations to win above aren't TRUE and we are at the roundCounter of 9, assume it is a tie.
+//    else if (self.currentRound == 9) {
+//        [self showWinner:@"It's a tie. Nobody"];
+//        return NO;
+//    }
+//    
+//    return NO;
+//}
     
-    NSLog(@"%@", titleLabelText);
-
-    
-    //if Button 1 is NOT empty, look for winners involving button 1
-    if (self.button1.titleLabel.text != nil){
-        //top row
-        (([self.button1.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString: self.button3.titleLabel.text])) ||
-        //middle row
-        (([self.button5.titleLabel.text isEqualToString: self.button4.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button6.titleLabel.text])) ||
-        //bottom row
-        (([self.button9.titleLabel.text isEqualToString: self.button8.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString: self.button7.titleLabel.text])) ||
-        
-        //middle column
-        (([self.button5.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button8.titleLabel.text])) ||
-        //left column
-        (([self.button1.titleLabel.text isEqualToString:self.button4.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString:self.button7.titleLabel.text])) ||
-        //right column
-        (([self.button9.titleLabel.text isEqualToString: self.button6.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString:self.button3.titleLabel.text])) ||
-        
-        //1 to 9 diagonal
-        (([self.button5.titleLabel.text isEqualToString: self.button1.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button9.titleLabel.text])) ||
-        //3 to 7 diagonal
-        (([self.button5.titleLabel.text isEqualToString:self.button3.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button7.titleLabel.text]));
-         {
-        return YES;
-         }}
-    
-    
-    //if Button 9 is NOT empty, look for winners involving button 9
-    else if (self.button9.titleLabel.text != nil){
-        //bottom row
-        if (((self.button9.titleLabel.text == self.button8.titleLabel.text) && (self.button9.titleLabel.text == self.button7.titleLabel.text)) ||
-            //right column
-            ((self.button9.titleLabel.text == self.button6.titleLabel.text) && (self.button9.titleLabel.text == self.button3.titleLabel.text))) {
-            NSLog(@"button 9 calc");
-            return YES;
-        }
-    }
-    
-
-    // if all the possible combinations to win above aren't TRUE and we are at the roundCounter of 9, assume it is a tie.
-    else if (self.currentRound == 9) {
-        [self showWinner:@"It's a tie. Nobody"];
-        return NO;
-    }
-    
+    NSLog(@"any winner called");
     return NO;
-}
-
-- (IBAction)gameSelected:(UISegmentedControl *)sender {
-    if (sender.selectedSegmentIndex == 0) {
-        [self threeByThreeGame];
-    }
+    
 }
 
 #pragma game settings method
 
+- (IBAction)gameSelected:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        [self threeByThreeGame];
+    } else if (sender.selectedSegmentIndex == 1) {
+        [self fourByFourGame];
+    } else {
+        [self fiveByFiveGame];
+    }
+}
+
+
+
 -(void)threeByThreeGame {
+    [self gameReset];
+    
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
     [self.button1 setHidden:NO];
@@ -337,6 +350,177 @@ NSString *OIsUp = @"O is up!";
     
 }
 
+-(void)fourByFourGame {
+    [self gameReset];
+    
+    //enabled + appeared buttons
+    [self.button1 setEnabled:YES];
+    [self.button1 setHidden:NO];
+    
+    [self.button2 setEnabled:YES];
+    [self.button2 setHidden:NO];
+    
+    [self.button3 setEnabled:YES];
+    [self.button3 setHidden:NO];
+    
+    [self.button4 setEnabled:YES];
+    [self.button4 setHidden:NO];
+
+    
+    [self.button6 setEnabled:YES];
+    [self.button6 setHidden:NO];
+    
+    [self.button7 setEnabled:YES];
+    [self.button7 setHidden:NO];
+    
+    [self.button8 setEnabled:YES];
+    [self.button8 setHidden:NO];
+    
+    [self.button9 setEnabled:YES];
+    [self.button9 setHidden:NO];
+
+    [self.button11 setEnabled:YES];
+    [self.button11 setHidden:NO];
+    
+    [self.button12 setEnabled:YES];
+    [self.button12 setHidden:NO];
+    
+    [self.button13 setEnabled:YES];
+    [self.button13 setHidden:NO];
+    
+    [self.button14 setEnabled:YES];
+    [self.button14 setHidden:NO];
+
+    
+    [self.button16 setEnabled:YES];
+    [self.button16 setHidden:NO];
+    
+    [self.button17 setEnabled:YES];
+    [self.button17 setHidden:NO];
+    
+    [self.button18 setEnabled:YES];
+    [self.button18 setHidden:NO];
+    
+    [self.button19 setEnabled:YES];
+    [self.button19 setHidden:NO];
+
+    
+    
+    
+    
+    //disabled buttons + hidden buttons
+    
+    [self.button5 setHidden:YES];
+    [self.button5 setEnabled:NO];
+    
+    
+    [self.button10 setHidden:YES];
+    [self.button10 setEnabled:NO];
+    
+    
+    [self.button15 setHidden:YES];
+    [self.button15 setEnabled:NO];
+
+    
+    [self.button20 setHidden:YES];
+    [self.button20 setEnabled:NO];
+    
+    [self.button21 setHidden:YES];
+    [self.button21 setEnabled:NO];
+    
+    [self.button22 setHidden:YES];
+    [self.button22 setEnabled:NO];
+    
+    [self.button23 setHidden:YES];
+    [self.button23 setEnabled:NO];
+    
+    [self.button24 setHidden:YES];
+    [self.button24 setEnabled:NO];
+    
+    [self.button25 setHidden:YES];
+    [self.button25 setEnabled:NO];
+    
+}
+
+-(void)fiveByFiveGame {
+    [self gameReset];
+    
+    //enabled + appeared buttons
+    [self.button1 setEnabled:YES];
+    [self.button1 setHidden:NO];
+    
+    [self.button2 setEnabled:YES];
+    [self.button2 setHidden:NO];
+    
+    [self.button3 setEnabled:YES];
+    [self.button3 setHidden:NO];
+    
+    [self.button4 setEnabled:YES];
+    [self.button4 setHidden:NO];
+    
+    [self.button5 setEnabled:YES];
+    [self.button5 setHidden:NO];
+    
+    [self.button6 setEnabled:YES];
+    [self.button6 setHidden:NO];
+    
+    [self.button7 setEnabled:YES];
+    [self.button7 setHidden:NO];
+    
+    [self.button8 setEnabled:YES];
+    [self.button8 setHidden:NO];
+    
+    [self.button9 setEnabled:YES];
+    [self.button9 setHidden:NO];
+    
+    [self.button10 setEnabled:YES];
+    [self.button10 setHidden:NO];
+    
+    [self.button11 setEnabled:YES];
+    [self.button11 setHidden:NO];
+    
+    [self.button12 setEnabled:YES];
+    [self.button12 setHidden:NO];
+    
+    [self.button13 setEnabled:YES];
+    [self.button13 setHidden:NO];
+    
+    [self.button14 setEnabled:YES];
+    [self.button14 setHidden:NO];
+    
+    [self.button15 setEnabled:YES];
+    [self.button15 setHidden:NO];
+    
+    [self.button16 setEnabled:YES];
+    [self.button16 setHidden:NO];
+    
+    [self.button17 setEnabled:YES];
+    [self.button17 setHidden:NO];
+    
+    [self.button18 setEnabled:YES];
+    [self.button18 setHidden:NO];
+    
+    [self.button19 setEnabled:YES];
+    [self.button19 setHidden:NO];
+    
+    [self.button20 setEnabled:YES];
+    [self.button20 setHidden:NO];
+    
+    [self.button21 setEnabled:YES];
+    [self.button21 setHidden:NO];
+    
+    [self.button22 setEnabled:YES];
+    [self.button22 setHidden:NO];
+    
+    [self.button23 setEnabled:YES];
+    [self.button23 setHidden:NO];
+    
+    [self.button24 setEnabled:YES];
+    [self.button24 setHidden:NO];
+    
+    [self.button25 setEnabled:YES];
+    [self.button25 setHidden:NO];
+}
 
 
 
