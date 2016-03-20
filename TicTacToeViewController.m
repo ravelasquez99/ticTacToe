@@ -164,31 +164,31 @@ int countToWin = 3;
 
 // game reset
 -(void)gameReset {
-    [self.button1 setTitle:@"1" forState:UIControlStateNormal];
-    [self.button2 setTitle:@"2" forState:UIControlStateNormal];
-    [self.button3 setTitle:@"3" forState:UIControlStateNormal];
-    [self.button4 setTitle:@"4" forState:UIControlStateNormal];
-    [self.button5 setTitle:@"5" forState:UIControlStateNormal];
-    [self.button6 setTitle:@"6" forState:UIControlStateNormal];
-    [self.button7 setTitle:@"7" forState:UIControlStateNormal];
-    [self.button8 setTitle:@"8" forState:UIControlStateNormal];
-    [self.button9 setTitle:@"9" forState:UIControlStateNormal];
-    [self.button10 setTitle:@"10" forState:UIControlStateNormal];
-    [self.button11 setTitle:@"11" forState:UIControlStateNormal];
-    [self.button12 setTitle:@"12" forState:UIControlStateNormal];
-    [self.button13 setTitle:@"13" forState:UIControlStateNormal];
-    [self.button14 setTitle:@"14" forState:UIControlStateNormal];
-    [self.button15 setTitle:@"15" forState:UIControlStateNormal];
-    [self.button16 setTitle:@"16" forState:UIControlStateNormal];
-    [self.button17 setTitle:@"17" forState:UIControlStateNormal];
-    [self.button18 setTitle:@"18" forState:UIControlStateNormal];
-    [self.button19 setTitle:@"19" forState:UIControlStateNormal];
-    [self.button20 setTitle:@"20" forState:UIControlStateNormal];
-    [self.button21 setTitle:@"21" forState:UIControlStateNormal];
-    [self.button22 setTitle:@"22" forState:UIControlStateNormal];
-    [self.button23 setTitle:@"23" forState:UIControlStateNormal];
-    [self.button24 setTitle:@"24" forState:UIControlStateNormal];
-    [self.button25 setTitle:@"25" forState:UIControlStateNormal];
+    [self.button1 setTitle:@"11" forState:UIControlStateNormal];
+    [self.button2 setTitle:@"21" forState:UIControlStateNormal];
+    [self.button3 setTitle:@"31" forState:UIControlStateNormal];
+    [self.button4 setTitle:@"41" forState:UIControlStateNormal];
+    [self.button5 setTitle:@"51" forState:UIControlStateNormal];
+    [self.button6 setTitle:@"12" forState:UIControlStateNormal];
+    [self.button7 setTitle:@"22" forState:UIControlStateNormal];
+    [self.button8 setTitle:@"32" forState:UIControlStateNormal];
+    [self.button9 setTitle:@"42" forState:UIControlStateNormal];
+    [self.button10 setTitle:@"52" forState:UIControlStateNormal];
+    [self.button11 setTitle:@"13" forState:UIControlStateNormal];
+    [self.button12 setTitle:@"23" forState:UIControlStateNormal];
+    [self.button13 setTitle:@"33" forState:UIControlStateNormal];
+    [self.button14 setTitle:@"43" forState:UIControlStateNormal];
+    [self.button15 setTitle:@"53" forState:UIControlStateNormal];
+    [self.button16 setTitle:@"14" forState:UIControlStateNormal];
+    [self.button17 setTitle:@"24" forState:UIControlStateNormal];
+    [self.button18 setTitle:@"34" forState:UIControlStateNormal];
+    [self.button19 setTitle:@"44" forState:UIControlStateNormal];
+    [self.button20 setTitle:@"54" forState:UIControlStateNormal];
+    [self.button21 setTitle:@"15" forState:UIControlStateNormal];
+    [self.button22 setTitle:@"25" forState:UIControlStateNormal];
+    [self.button23 setTitle:@"35" forState:UIControlStateNormal];
+    [self.button24 setTitle:@"45" forState:UIControlStateNormal];
+    [self.button25 setTitle:@"55" forState:UIControlStateNormal];
     
   
 
