@@ -37,6 +37,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *button23;
 @property (weak, nonatomic) IBOutlet UIButton *button24;
 @property (weak, nonatomic) IBOutlet UIButton *button25;
+@property NSMutableArray *xArray;
+@property NSMutableArray *oArray;
 
 
 #pragma labels and other properties
@@ -46,13 +48,16 @@
 @property int currentRound;
 @property UIImage *blueX;
 @property UIImage *redO;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *gameselectedOutlet;
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *gameselectedOutlet;
 @end
 
 @implementation TicTacToeViewController
 NSString *xIsUp = @"X is up!";
 NSString *OIsUp = @"O is up!";
+int countToWin = 3;
+
+
 
 
 - (void)viewDidLoad {
@@ -62,6 +67,10 @@ NSString *OIsUp = @"O is up!";
     self.redO = [UIImage imageNamed:@"redO"];
     self.blueX = [UIImage imageNamed:@"blueX"];
     [self gameSelected:self.gameselectedOutlet];
+    
+    //initializing the x and o arrays
+    self.xArray = [NSMutableArray new];
+    self.oArray = [NSMutableArray new];
 
 }
 
@@ -76,6 +85,11 @@ NSString *OIsUp = @"O is up!";
 
     }
 }
+
+//rest the game button method
+
+
+
 
 //method call to show the winner
 -(void)showWinner:(NSString *)winner{
@@ -95,31 +109,46 @@ NSString *OIsUp = @"O is up!";
     
     //if player is x
     if (self.xIsCurrentTurn) {
+        //creates a title string based on the current title string
+        NSString *xTitleString = sender.currentTitle;
         
+        //adds that title to the array
+        [self.xArray addObject:xTitleString];
+        NSLog(@"%@", self.xArray);
         
+        //[sender setImage:[UIImage imageNamed:@"redX"] forState:UIControlStateNormal];
         [sender setTitle:@"X" forState:UIControlStateNormal];
         
         //get back out
         
         [sender titleForState:[sender state]];
         
+        
         //changesTurn
         
         self.xIsCurrentTurn = NO;
+        self.currentTurnLabel.text = OIsUp;
         
         // if player is O
     }else {
-      
+        
+        //creates a title string based on the current title string
+        NSString *oTitleString = sender.currentTitle;
+        [self.oArray addObject:oTitleString];
+        //NSLog(@"%@", self.oArray);
         
         [sender setTitle:@"O" forState:UIControlStateNormal];
+         //[sender setImage:[UIImage imageNamed:@"blueO"] forState:UIControlStateNormal];
         
         //get back out
         
         [sender titleForState:[sender state]];
         
+        
         //changesTurn
         
         self.xIsCurrentTurn = YES;
+        self.currentTurnLabel.text = xIsUp;
     }
     
     [sender setEnabled:NO];
@@ -173,6 +202,7 @@ NSString *OIsUp = @"O is up!";
 
 // after every round, call this method to double check if we have a winner or not
 -(BOOL)anyWinner{
+    
     //need to add something here to prevent empty boxes setting this to true. ie. when roundCount is at least 5 (since it takes 5 turns before someone can actually win)
 //    NSString *titleLabelText = [NSString new] ;
 //    titleLabelText = self.button1.titleLabel.text;
@@ -249,6 +279,7 @@ NSString *OIsUp = @"O is up!";
 
 -(void)threeByThreeGame {
     [self gameReset];
+    countToWin = 3;
     
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
@@ -335,6 +366,7 @@ NSString *OIsUp = @"O is up!";
 
 -(void)fourByFourGame {
     [self gameReset];
+    countToWin = 4;
     
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
@@ -427,6 +459,7 @@ NSString *OIsUp = @"O is up!";
 
 -(void)fiveByFiveGame {
     [self gameReset];
+    countToWin = 5;
     
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];

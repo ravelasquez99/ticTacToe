@@ -58,6 +58,9 @@
                                 <state key="normal" title="RESET THE GAME">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onResetGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PpR-wZ-9rI"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Qa-DT-me5">
                                 <rect key="frame" x="211" y="483" width="180" height="29"/>
@@ -86,7 +89,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="vcn-kO-rli"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="1">
+                                <state key="normal" title="11">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -105,7 +108,7 @@
                                     <constraint firstAttribute="width" constant="60" id="rf0-Hl-Oqf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="3">
+                                <state key="normal" title="31">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -120,7 +123,7 @@
                                     <constraint firstAttribute="width" constant="60" id="U9e-Xy-LNe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="2">
+                                <state key="normal" title="21">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -137,7 +140,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="yO5-fA-YI2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="5">
+                                <state key="normal" title="51">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -154,28 +157,11 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="PAC-mQ-gLG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="6">
+                                <state key="normal" title="12">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iss-jg-ORg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-r6-LXp">
-                                <rect key="frame" x="330" y="124" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.36773595279999999" green="1" blue="0.62419853250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="VpV-r6-HlK"/>
-                                    <constraint firstAttribute="width" constant="60" id="e0m-GB-nrQ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eC0-7E-9d6"/>
-                                    <constraint firstAttribute="height" constant="60" id="tyG-MR-8xr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="4">
-                                    <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AhY-Na-PLi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiC-4z-N9D">
@@ -188,7 +174,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="zHR-VD-GSO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="8">
+                                <state key="normal" title="32">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -205,7 +191,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="nWN-zd-wW6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="9">
+                                <state key="normal" title="42">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -223,7 +209,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="skz-Rs-HmS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="10">
+                                <state key="normal" title="52">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
@@ -239,7 +225,7 @@
                                 <rect key="frame" x="211" y="242" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.36773595279999999" green="1" blue="0.62419853250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="12">
+                                <state key="normal" title="23">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -250,7 +236,7 @@
                                 <rect key="frame" x="270" y="242" width="60" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.55693513189999999" blue="0.49548113069999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="13">
+                                <state key="normal" title="33">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -261,7 +247,7 @@
                                 <rect key="frame" x="330" y="242" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.36773595279999999" green="1" blue="0.62419853250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="14">
+                                <state key="normal" title="43">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -275,7 +261,7 @@
                                     <constraint firstAttribute="width" constant="60" id="NGf-CB-TI6"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="15">
+                                <state key="normal" title="53">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -289,7 +275,7 @@
                                     <constraint firstAttribute="width" constant="60" id="LrL-tq-jPj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="17">
+                                <state key="normal" title="24">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -303,7 +289,7 @@
                                     <constraint firstAttribute="width" constant="60" id="5eZ-dE-e4l"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="18">
+                                <state key="normal" title="34">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -320,7 +306,7 @@
                                     <constraint firstAttribute="width" constant="60" id="zrz-Im-PGE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="19">
+                                <state key="normal" title="44">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -335,7 +321,7 @@
                                     <constraint firstAttribute="width" constant="60" id="WVn-jT-qLH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="11">
+                                <state key="normal" title="13">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -349,7 +335,7 @@
                                     <constraint firstAttribute="height" constant="60" id="lSe-sg-sRD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="16">
+                                <state key="normal" title="14">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -363,7 +349,7 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="gmJ-58-IOR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="20">
+                                <state key="normal" title="54">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
@@ -382,7 +368,7 @@
                                     <constraint firstAttribute="height" constant="60" id="NFH-lE-6Df"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="21">
+                                <state key="normal" title="15">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -393,7 +379,7 @@
                                 <rect key="frame" x="211" y="360" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.36773595279999999" green="1" blue="0.62419853250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="22">
+                                <state key="normal" title="25">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -407,7 +393,7 @@
                                     <constraint firstAttribute="width" constant="60" id="Fpf-6c-PjD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="23">
+                                <state key="normal" title="35">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -418,7 +404,7 @@
                                 <rect key="frame" x="330" y="360" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.36773595279999999" green="1" blue="0.62419853250000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="24">
+                                <state key="normal" title="45">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -432,7 +418,7 @@
                                     <constraint firstAttribute="width" constant="60" id="R6q-TX-HhN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="25">
+                                <state key="normal" title="55">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -449,11 +435,28 @@
                                     <constraint firstAttribute="width" constant="60" id="bRG-4E-aGk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="7">
+                                <state key="normal" title="22">
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6s-G5-F3Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofW-r6-LXp">
+                                <rect key="frame" x="330" y="124" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.36773595279999999" green="1" blue="0.62419853250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="VpV-r6-HlK"/>
+                                    <constraint firstAttribute="width" constant="60" id="e0m-GB-nrQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eC0-7E-9d6"/>
+                                    <constraint firstAttribute="height" constant="60" id="tyG-MR-8xr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="41">
+                                    <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AhY-Na-PLi"/>
                                 </connections>
                             </button>
                         </subviews>
