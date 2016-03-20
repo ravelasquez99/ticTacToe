@@ -59,7 +59,7 @@
                                     <color key="titleColor" red="1" green="0.96571733999999998" blue="0.97494388239999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="onResetGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PpR-wZ-9rI"/>
+                                    <action selector="onResetGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x4o-Nj-4SW"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6Qa-DT-me5">

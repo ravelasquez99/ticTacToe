@@ -39,6 +39,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *button25;
 @property NSMutableArray *xArray;
 @property NSMutableArray *oArray;
+@property int selectedGame;
 
 
 #pragma labels and other properties
@@ -71,6 +72,7 @@ int countToWin = 3;
     //initializing the x and o arrays
     self.xArray = [NSMutableArray new];
     self.oArray = [NSMutableArray new];
+    self.selectedGame = 0;
 
 }
 
@@ -280,6 +282,7 @@ int countToWin = 3;
 -(void)threeByThreeGame {
     [self gameReset];
     countToWin = 3;
+    self.selectedGame = 0;
     
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
@@ -367,6 +370,7 @@ int countToWin = 3;
 -(void)fourByFourGame {
     [self gameReset];
     countToWin = 4;
+    self.selectedGame = 1;
     
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
@@ -460,6 +464,7 @@ int countToWin = 3;
 -(void)fiveByFiveGame {
     [self gameReset];
     countToWin = 5;
+    self.selectedGame = 2;
     
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
@@ -538,6 +543,16 @@ int countToWin = 3;
     [self.button25 setHidden:NO];
 }
 
+- (IBAction)onResetGameButtonPressed:(UIButton *)sender {
+    
+    if (self.selectedGame == 0) {
+        [self threeByThreeGame];
+    } else if( self.selectedGame == 1){
+        [self fourByFourGame];
+    }else if (self.selectedGame == 2){
+        [self fiveByFiveGame];
+    }
+}
 
 
 
