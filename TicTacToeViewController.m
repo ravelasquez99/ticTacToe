@@ -121,6 +121,8 @@ NSString *OIsUp = @"O is up!";
         
         self.xIsCurrentTurn = YES;
     }
+    
+    [sender setEnabled:NO];
 }
 
 
@@ -133,60 +135,34 @@ NSString *OIsUp = @"O is up!";
 
 // game reset
 -(void)gameReset {
-//    [self.button1 setTitle:nil forState:UIControlStateNormal];
-//    [self.button2 setTitle:nil forState:UIControlStateNormal];
-//    [self.button3 setTitle:nil forState:UIControlStateNormal];
-//    [self.button4 setTitle:nil forState:UIControlStateNormal];
-//    [self.button5 setTitle:nil forState:UIControlStateNormal];
-//    [self.button6 setTitle:nil forState:UIControlStateNormal];
-//    [self.button7 setTitle:nil forState:UIControlStateNormal];
-//    [self.button8 setTitle:nil forState:UIControlStateNormal];
-//    [self.button9 setTitle:nil forState:UIControlStateNormal];
-//    [self.button10 setTitle:nil forState:UIControlStateNormal];
-//    [self.button11 setTitle:nil forState:UIControlStateNormal];
-//    [self.button12 setTitle:nil forState:UIControlStateNormal];
-//    [self.button13 setTitle:nil forState:UIControlStateNormal];
-//    [self.button14 setTitle:nil forState:UIControlStateNormal];
-//    [self.button15 setTitle:nil forState:UIControlStateNormal];
-//    [self.button16 setTitle:nil forState:UIControlStateNormal];
-//    [self.button17 setTitle:nil forState:UIControlStateNormal];
-//    [self.button18 setTitle:nil forState:UIControlStateNormal];
-//    [self.button19 setTitle:nil forState:UIControlStateNormal];
-//    [self.button20 setTitle:nil forState:UIControlStateNormal];
-//    [self.button21 setTitle:nil forState:UIControlStateNormal];
-//    [self.button22 setTitle:nil forState:UIControlStateNormal];
-//    [self.button23 setTitle:nil forState:UIControlStateNormal];
-//    [self.button24 setTitle:nil forState:UIControlStateNormal];
-//    [self.button25 setTitle:nil forState:UIControlStateNormal];
+    [self.button1 setTitle:@"1" forState:UIControlStateNormal];
+    [self.button2 setTitle:@"2" forState:UIControlStateNormal];
+    [self.button3 setTitle:@"3" forState:UIControlStateNormal];
+    [self.button4 setTitle:@"4" forState:UIControlStateNormal];
+    [self.button5 setTitle:@"5" forState:UIControlStateNormal];
+    [self.button6 setTitle:@"6" forState:UIControlStateNormal];
+    [self.button7 setTitle:@"7" forState:UIControlStateNormal];
+    [self.button8 setTitle:@"8" forState:UIControlStateNormal];
+    [self.button9 setTitle:@"9" forState:UIControlStateNormal];
+    [self.button10 setTitle:@"10" forState:UIControlStateNormal];
+    [self.button11 setTitle:@"11" forState:UIControlStateNormal];
+    [self.button12 setTitle:@"12" forState:UIControlStateNormal];
+    [self.button13 setTitle:@"13" forState:UIControlStateNormal];
+    [self.button14 setTitle:@"14" forState:UIControlStateNormal];
+    [self.button15 setTitle:@"15" forState:UIControlStateNormal];
+    [self.button16 setTitle:@"16" forState:UIControlStateNormal];
+    [self.button17 setTitle:@"17" forState:UIControlStateNormal];
+    [self.button18 setTitle:@"18" forState:UIControlStateNormal];
+    [self.button19 setTitle:@"19" forState:UIControlStateNormal];
+    [self.button20 setTitle:@"20" forState:UIControlStateNormal];
+    [self.button21 setTitle:@"21" forState:UIControlStateNormal];
+    [self.button22 setTitle:@"22" forState:UIControlStateNormal];
+    [self.button23 setTitle:@"23" forState:UIControlStateNormal];
+    [self.button24 setTitle:@"24" forState:UIControlStateNormal];
+    [self.button25 setTitle:@"25" forState:UIControlStateNormal];
     
   
 
-//    self.button1.enabled = YES;
-//    self.button2.enabled = YES;
-//    self.button3.enabled = YES;
-//    self.button4.enabled = YES;
-//    self.button5.enabled = YES;
-//    self.button6.enabled = YES;
-//    self.button7.enabled = YES;
-//    self.button8.enabled = YES;
-//    self.button9.enabled = YES;
-//    self.button10.enabled = YES;
-//    self.button11.enabled = YES;
-//    self.button12.enabled = YES;
-//    self.button13.enabled = YES;
-//    self.button14.enabled = YES;
-//    self.button15.enabled = YES;
-//    self.button16.enabled = YES;
-//    self.button17.enabled = YES;
-//    self.button18.enabled = YES;
-//    self.button19.enabled = YES;
-//    self.button20.enabled = YES;
-//    self.button21.enabled = YES;
-//    self.button22.enabled = YES;
-//    self.button23.enabled = YES;
-//    self.button24.enabled = YES;
-//    self.button25.enabled = YES;
-// 
 
     self.xIsCurrentTurn = YES;
     self.currentTurnLabel.text = xIsUp;
