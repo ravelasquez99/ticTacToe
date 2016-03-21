@@ -372,30 +372,51 @@ int countToWin = 3;
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
     [self.button1 setHidden:NO];
+    [[self.button1 layer]setBorderWidth:2.0f];
+    [[self.button1 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button2 setEnabled:YES];
     [self.button2 setHidden:NO];
+    [[self.button2 layer]setBorderWidth:2.0f];
+    [[self.button2 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button3 setEnabled:YES];
     [self.button3 setHidden:NO];
+    [[self.button3 layer]setBorderWidth:2.0f];
+    [[self.button3 layer] setBorderColor:[UIColor blackColor].CGColor];
+    
     
     [self.button6 setEnabled:YES];
     [self.button6 setHidden:NO];
+    [[self.button6 layer]setBorderWidth:2.0f];
+    [[self.button6 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button7 setEnabled:YES];
     [self.button7 setHidden:NO];
+    [[self.button7 layer]setBorderWidth:2.0f];
+    [[self.button7 layer] setBorderColor:[UIColor blackColor].CGColor];
+   
+    
     
     [self.button8 setEnabled:YES];
     [self.button8 setHidden:NO];
+    [[self.button8 layer]setBorderWidth:2.0f];
+    [[self.button8 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button11 setEnabled:YES];
-    [self.button9 setHidden:NO];
+    [self.button11 setHidden:NO];
+    [[self.button11 layer]setBorderWidth:2.0f];
+    [[self.button11 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button12 setEnabled:YES];
     [self.button12 setHidden:NO];
+    [[self.button12 layer]setBorderWidth:2.0f];
+    [[self.button12 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button13 setEnabled:YES];
     [self.button13 setHidden:NO];
+    [[self.button13 layer]setBorderWidth:2.0f];
+    [[self.button13 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     
     
@@ -460,6 +481,7 @@ int countToWin = 3;
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
     [self.button1 setHidden:NO];
+    
     
     [self.button2 setEnabled:YES];
     [self.button2 setHidden:NO];
