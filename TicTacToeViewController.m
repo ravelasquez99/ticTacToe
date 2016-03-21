@@ -40,6 +40,8 @@
 @property NSMutableArray *xArray;
 @property NSMutableArray *oArray;
 @property int selectedGame;
+@property  NSNumber *plusTenNSNumber;
+@property NSNumber *minusTenNSNumber;
 
 
 #pragma labels and other properties
@@ -73,8 +75,11 @@ int countToWin = 3;
     self.xArray = [NSMutableArray new];
     self.oArray = [NSMutableArray new];
     self.selectedGame = 0;
+    
+    }
+    
 
-}
+
 
 //created a method to change the player turn
 -(void) changePlayerTurn {
@@ -88,7 +93,8 @@ int countToWin = 3;
     }
 }
 
-//rest the game button method
+
+
 
 
 
@@ -111,15 +117,13 @@ int countToWin = 3;
     
     //if player is x
     if (self.xIsCurrentTurn) {
-        //creates a title string based on the current title string
+        //creates a title string based on the current title string and converts it to an NSInteger so we can put it in the array
         NSString *xTitleString = sender.currentTitle;
+        int temp = [xTitleString intValue];
+        NSNumber *numberEntered = [NSNumber numberWithInt:temp];
+        [self.xArray addObject:numberEntered];
         
-        //adds that title to the array
-        [self.xArray addObject:xTitleString];
-        NSLog(@"%@", self.xArray);
-        
-        //[sender setImage:[UIImage imageNamed:@"redX"] forState:UIControlStateNormal];
-        [sender setTitle:@"X" forState:UIControlStateNormal];
+       
         
         //get back out
         
@@ -130,16 +134,23 @@ int countToWin = 3;
         
         self.xIsCurrentTurn = NO;
         self.currentTurnLabel.text = OIsUp;
+        BOOL isThereAWinner = [self checkWinnerInArray:self.xArray forButtonPressed:numberEntered];
+        
+        //[sender setImage:[UIImage imageNamed:@"redX"] forState:UIControlStateNormal];
+        [sender setTitle:@"X" forState:UIControlStateNormal];
         
         // if player is O
     }else {
         
-        //creates a title string based on the current title string
+        //creates a title string based on the current title string and converts it to an NSInteger so we can put it in the array
         NSString *oTitleString = sender.currentTitle;
-        [self.oArray addObject:oTitleString];
+        int temp = [oTitleString intValue];
+        NSNumber *numberEntered = [NSNumber numberWithInt:temp];
+        [self.oArray addObject:numberEntered];
+         BOOL isThereAWinner = [self checkWinnerInArray:self.oArray forButtonPressed:numberEntered];
         //NSLog(@"%@", self.oArray);
         
-        [sender setTitle:@"O" forState:UIControlStateNormal];
+       
          //[sender setImage:[UIImage imageNamed:@"blueO"] forState:UIControlStateNormal];
         
         //get back out
@@ -151,15 +162,39 @@ int countToWin = 3;
         
         self.xIsCurrentTurn = YES;
         self.currentTurnLabel.text = xIsUp;
+       
+        
+         [sender setTitle:@"O" forState:UIControlStateNormal];
     }
     
     [sender setEnabled:NO];
 }
 
 
+
 // round checker. to see what round we are on out of 9
 -(void)roundCounter{
     self.currentRound++;
+}
+
+-(BOOL)checkWinnerInArray: (NSMutableArray *)selectedSquares forButtonPressed:(NSNumber*)buttonPressed {
+    
+    [self horizontalWinnerCheck:selectedSquares forButtonPressed:buttonPressed];
+    
+    return NO;
+}
+
+-(BOOL)horizontalWinnerCheck: (NSMutableArray *)selectedSquares forButtonPressed: (NSNumber *)buttonPressed {
+   //getting the row number
+    NSString *buttonPressedString = [NSString stringWithFormat:@"%@", buttonPressed];
+    unichar lastChar = [buttonPressedString characterAtIndex:[buttonPressedString length] - 1];
+    NSString *characterLast = [NSString stringWithFormat:@"%c", lastChar];
+    int rowNumber = [characterLast intValue];
+    NSLog(@"%i", rowNumber);
+    
+    
+    
+    return NO;
 }
 
 
@@ -203,66 +238,6 @@ int countToWin = 3;
 
 
 // after every round, call this method to double check if we have a winner or not
--(BOOL)anyWinner{
-    
-    //need to add something here to prevent empty boxes setting this to true. ie. when roundCount is at least 5 (since it takes 5 turns before someone can actually win)
-//    NSString *titleLabelText = [NSString new] ;
-//    titleLabelText = self.button1.titleLabel.text;
-//    
-//    NSLog(@"%@", titleLabelText);
-//
-//    
-//    //if Button 1 is NOT empty, look for winners involving button 1
-//    if (self.button1.titleLabel.text != nil){
-//        //top row
-//        (([self.button1.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString: self.button3.titleLabel.text])) ||
-//        //middle row
-//        (([self.button5.titleLabel.text isEqualToString: self.button4.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button6.titleLabel.text])) ||
-//        //bottom row
-//        (([self.button9.titleLabel.text isEqualToString: self.button8.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString: self.button7.titleLabel.text])) ||
-//        
-//        //middle column
-//        (([self.button5.titleLabel.text isEqualToString: self.button2.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString: self.button8.titleLabel.text])) ||
-//        //left column
-//        (([self.button1.titleLabel.text isEqualToString:self.button4.titleLabel.text]) && ([self.button1.titleLabel.text isEqualToString:self.button7.titleLabel.text])) ||
-//        //right column
-//        (([self.button9.titleLabel.text isEqualToString: self.button6.titleLabel.text]) && ([self.button9.titleLabel.text isEqualToString:self.button3.titleLabel.text])) ||
-//        
-//        //1 to 9 diagonal
-//        (([self.button5.titleLabel.text isEqualToString: self.button1.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button9.titleLabel.text])) ||
-//        //3 to 7 diagonal
-//        (([self.button5.titleLabel.text isEqualToString:self.button3.titleLabel.text]) && ([self.button5.titleLabel.text isEqualToString:self.button7.titleLabel.text]));
-//         {
-//        return YES;
-//         }}
-//    
-//    
-//    //if Button 9 is NOT empty, look for winners involving button 9
-//    else if (self.button9.titleLabel.text != nil){
-//        //bottom row
-//        if (((self.button9.titleLabel.text == self.button8.titleLabel.text) && (self.button9.titleLabel.text == self.button7.titleLabel.text)) ||
-//            //right column
-//            ((self.button9.titleLabel.text == self.button6.titleLabel.text) && (self.button9.titleLabel.text == self.button3.titleLabel.text))) {
-//            NSLog(@"button 9 calc");
-//            return YES;
-//        }
-//    }
-//    
-//
-//    // if all the possible combinations to win above aren't TRUE and we are at the roundCounter of 9, assume it is a tie.
-//    else if (self.currentRound == 9) {
-//        [self showWinner:@"It's a tie. Nobody"];
-//        return NO;
-//    }
-//    
-//    return NO;
-//}
-    
-    NSLog(@"any winner called");
-    return NO;
-    
-}
-
 #pragma game settings method
 
 
@@ -553,6 +528,12 @@ int countToWin = 3;
         [self fiveByFiveGame];
     }
 }
+
+
+
+
+
+
 
 
 
