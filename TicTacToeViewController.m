@@ -145,8 +145,9 @@ int countToWin = 3;
         if (thereIsAWinner) {
             [self showWinner:@"X is the winner"];
         }
-        //[sender setImage:[UIImage imageNamed:@"redX"] forState:UIControlStateNormal];
+        //sets the name and color for x
         [sender setTitle:@"X" forState:UIControlStateNormal];
+        [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         
         // if player is O
     }else {
@@ -174,7 +175,8 @@ int countToWin = 3;
         self.currentTurnLabel.text = xIsUp;
        
         
-         [sender setTitle:@"O" forState:UIControlStateNormal];
+        [sender setTitle:@"O" forState:UIControlStateNormal];
+        [sender setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     }
     
     [sender setEnabled:NO];
