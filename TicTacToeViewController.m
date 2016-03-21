@@ -312,30 +312,81 @@ int countToWin = 3;
     self.oArray = [NSMutableArray new];
     
     [self.button1 setTitle:@"11" forState:UIControlStateNormal];
+    [self.button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    
     [self.button2 setTitle:@"21" forState:UIControlStateNormal];
+    [self.button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button3 setTitle:@"31" forState:UIControlStateNormal];
+    [self.button3 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button4 setTitle:@"41" forState:UIControlStateNormal];
+    [self.button4 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    
     [self.button5 setTitle:@"51" forState:UIControlStateNormal];
+    [self.button5 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button6 setTitle:@"12" forState:UIControlStateNormal];
+    [self.button6 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button7 setTitle:@"22" forState:UIControlStateNormal];
+    [self.button7 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button8 setTitle:@"32" forState:UIControlStateNormal];
+    [self.button8 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button9 setTitle:@"42" forState:UIControlStateNormal];
+    [self.button9 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button10 setTitle:@"52" forState:UIControlStateNormal];
+    [self.button10 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button11 setTitle:@"13" forState:UIControlStateNormal];
+    [self.button11 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button12 setTitle:@"23" forState:UIControlStateNormal];
+    [self.button12 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button13 setTitle:@"33" forState:UIControlStateNormal];
+    [self.button13 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button14 setTitle:@"43" forState:UIControlStateNormal];
+    [self.button14 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button15 setTitle:@"53" forState:UIControlStateNormal];
+    [self.button15 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button16 setTitle:@"14" forState:UIControlStateNormal];
+    [self.button17 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button17 setTitle:@"24" forState:UIControlStateNormal];
+    [self.button17 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button18 setTitle:@"34" forState:UIControlStateNormal];
+    [self.button18 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button19 setTitle:@"44" forState:UIControlStateNormal];
+    [self.button19 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button20 setTitle:@"54" forState:UIControlStateNormal];
+    [self.button20 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button21 setTitle:@"15" forState:UIControlStateNormal];
+    [self.button21 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button22 setTitle:@"25" forState:UIControlStateNormal];
+    [self.button22 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button23 setTitle:@"35" forState:UIControlStateNormal];
+    [self.button23 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button24 setTitle:@"45" forState:UIControlStateNormal];
+    [self.button24 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [self.button25 setTitle:@"55" forState:UIControlStateNormal];
+    [self.button25 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
   
 
@@ -481,54 +532,85 @@ int countToWin = 3;
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
     [self.button1 setHidden:NO];
+    [[self.button1 layer]setBorderWidth:2.0f];
+    [[self.button1 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     
     [self.button2 setEnabled:YES];
     [self.button2 setHidden:NO];
+    [[self.button2 layer]setBorderWidth:2.0f];
+    [[self.button2 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button3 setEnabled:YES];
     [self.button3 setHidden:NO];
+    [[self.button3 layer]setBorderWidth:2.0f];
+    [[self.button3 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button4 setEnabled:YES];
     [self.button4 setHidden:NO];
-
+    [[self.button4 layer]setBorderWidth:2.0f];
+    [[self.button4 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button6 setEnabled:YES];
     [self.button6 setHidden:NO];
+    [[self.button5 layer]setBorderWidth:2.0f];
+    [[self.button5 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button7 setEnabled:YES];
     [self.button7 setHidden:NO];
+    [[self.button7 layer]setBorderWidth:2.0f];
+    [[self.button7 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button8 setEnabled:YES];
     [self.button8 setHidden:NO];
+    [[self.button8 layer]setBorderWidth:2.0f];
+    [[self.button8 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button9 setEnabled:YES];
     [self.button9 setHidden:NO];
+    [[self.button9 layer]setBorderWidth:2.0f];
+    [[self.button9 layer] setBorderColor:[UIColor blackColor].CGColor];
 
     [self.button11 setEnabled:YES];
     [self.button11 setHidden:NO];
+    [[self.button11 layer]setBorderWidth:2.0f];
+    [[self.button11 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button12 setEnabled:YES];
     [self.button12 setHidden:NO];
+    [[self.button12 layer]setBorderWidth:2.0f];
+    [[self.button12 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button13 setEnabled:YES];
     [self.button13 setHidden:NO];
+    [[self.button13 layer]setBorderWidth:2.0f];
+    [[self.button13 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button14 setEnabled:YES];
     [self.button14 setHidden:NO];
+    [[self.button14 layer]setBorderWidth:2.0f];
+    [[self.button14 layer] setBorderColor:[UIColor blackColor].CGColor];
 
     
     [self.button16 setEnabled:YES];
     [self.button16 setHidden:NO];
+    [[self.button16 layer]setBorderWidth:2.0f];
+    [[self.button16 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button17 setEnabled:YES];
     [self.button17 setHidden:NO];
+    [[self.button17 layer]setBorderWidth:2.0f];
+    [[self.button17 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button18 setEnabled:YES];
     [self.button18 setHidden:NO];
+    [[self.button18 layer]setBorderWidth:2.0f];
+    [[self.button18 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button19 setEnabled:YES];
     [self.button19 setHidden:NO];
+    [[self.button19 layer]setBorderWidth:2.0f];
+    [[self.button19 layer] setBorderColor:[UIColor blackColor].CGColor];
 
     
     
@@ -576,78 +658,130 @@ int countToWin = 3;
     //enabled + appeared buttons
     [self.button1 setEnabled:YES];
     [self.button1 setHidden:NO];
+    [[self.button1 layer]setBorderWidth:2.0f];
+    [[self.button1 layer] setBorderColor:[UIColor blackColor].CGColor];
+    
     
     [self.button2 setEnabled:YES];
     [self.button2 setHidden:NO];
+    [[self.button2 layer]setBorderWidth:2.0f];
+    [[self.button2 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button3 setEnabled:YES];
     [self.button3 setHidden:NO];
+    [[self.button3 layer]setBorderWidth:2.0f];
+    [[self.button3 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button4 setEnabled:YES];
     [self.button4 setHidden:NO];
+    [[self.button4 layer]setBorderWidth:2.0f];
+    [[self.button4 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button5 setEnabled:YES];
     [self.button5 setHidden:NO];
+    [[self.button5 layer]setBorderWidth:2.0f];
+    [[self.button5 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button6 setEnabled:YES];
     [self.button6 setHidden:NO];
+    [[self.button6 layer]setBorderWidth:2.0f];
+    [[self.button6 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button7 setEnabled:YES];
     [self.button7 setHidden:NO];
+    [[self.button7 layer]setBorderWidth:2.0f];
+    [[self.button7 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button8 setEnabled:YES];
     [self.button8 setHidden:NO];
+    [[self.button8 layer]setBorderWidth:2.0f];
+    [[self.button8 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button9 setEnabled:YES];
     [self.button9 setHidden:NO];
+    [[self.button9 layer]setBorderWidth:2.0f];
+    [[self.button9 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button10 setEnabled:YES];
     [self.button10 setHidden:NO];
+    [[self.button10 layer]setBorderWidth:2.0f];
+    [[self.button10 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button11 setEnabled:YES];
     [self.button11 setHidden:NO];
+    [[self.button11 layer]setBorderWidth:2.0f];
+    [[self.button11 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button12 setEnabled:YES];
     [self.button12 setHidden:NO];
+    [[self.button12 layer]setBorderWidth:2.0f];
+    [[self.button12 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button13 setEnabled:YES];
     [self.button13 setHidden:NO];
+    [[self.button13 layer]setBorderWidth:2.0f];
+    [[self.button13 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button14 setEnabled:YES];
     [self.button14 setHidden:NO];
+    [[self.button14 layer]setBorderWidth:2.0f];
+    [[self.button14 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button15 setEnabled:YES];
     [self.button15 setHidden:NO];
+    [[self.button15 layer]setBorderWidth:2.0f];
+    [[self.button15 layer] setBorderColor:[UIColor blackColor].CGColor];
+    
     
     [self.button16 setEnabled:YES];
     [self.button16 setHidden:NO];
+    [[self.button16 layer]setBorderWidth:2.0f];
+    [[self.button16 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button17 setEnabled:YES];
     [self.button17 setHidden:NO];
+    [[self.button17 layer]setBorderWidth:2.0f];
+    [[self.button17 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button18 setEnabled:YES];
     [self.button18 setHidden:NO];
+    [[self.button18 layer]setBorderWidth:2.0f];
+    [[self.button18 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button19 setEnabled:YES];
     [self.button19 setHidden:NO];
+    [[self.button19 layer]setBorderWidth:2.0f];
+    [[self.button19 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button20 setEnabled:YES];
     [self.button20 setHidden:NO];
+    [[self.button20 layer]setBorderWidth:2.0f];
+    [[self.button20 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button21 setEnabled:YES];
     [self.button21 setHidden:NO];
+    [[self.button21 layer]setBorderWidth:2.0f];
+    [[self.button21 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button22 setEnabled:YES];
     [self.button22 setHidden:NO];
+    [[self.button22 layer]setBorderWidth:2.0f];
+    [[self.button22 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button23 setEnabled:YES];
     [self.button23 setHidden:NO];
+    [[self.button23 layer]setBorderWidth:2.0f];
+    [[self.button23 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button24 setEnabled:YES];
     [self.button24 setHidden:NO];
+    [[self.button24 layer]setBorderWidth:2.0f];
+    [[self.button24 layer] setBorderColor:[UIColor blackColor].CGColor];
     
     [self.button25 setEnabled:YES];
     [self.button25 setHidden:NO];
+    [[self.button25 layer]setBorderWidth:2.0f];
+    [[self.button25 layer] setBorderColor:[UIColor blackColor].CGColor];
 }
 
 - (IBAction)onResetGameButtonPressed:(UIButton *)sender {
