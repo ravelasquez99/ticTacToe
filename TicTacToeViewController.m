@@ -141,8 +141,8 @@ int countToWin = 3;
         
         self.xIsCurrentTurn = NO;
         self.currentTurnLabel.text = OIsUp;
-        BOOL isThereAWinner = [self checkWinnerInArray:self.xArray forButtonPressed:numberEntered];
-        if (isThereAWinner) {
+        BOOL thereIsAWinner = [self checkWinnerInArray:self.xArray forButtonPressed:numberEntered];
+        if (thereIsAWinner) {
             [self showWinner:@"X is the winner"];
         }
         //[sender setImage:[UIImage imageNamed:@"redX"] forState:UIControlStateNormal];
@@ -156,8 +156,8 @@ int countToWin = 3;
         int temp = [oTitleString intValue];
         NSNumber *numberEntered = [NSNumber numberWithInt:temp];
         [self.oArray addObject:numberEntered];
-         BOOL isThereAWinner = [self checkWinnerInArray:self.oArray forButtonPressed:numberEntered];
-        if (isThereAWinner) {
+         BOOL thereIsAWinner = [self checkWinnerInArray:self.oArray forButtonPressed:numberEntered];
+        if (thereIsAWinner) {
             [self showWinner:@"O is the winner"];
         }
        
@@ -189,10 +189,19 @@ int countToWin = 3;
 
 -(BOOL)checkWinnerInArray: (NSMutableArray *)selectedSquares forButtonPressed:(NSNumber*)buttonPressed {
     
+    
+    //runs a horizontal check
     BOOL horizontalCheck = [self horizontalWinnerCheck:selectedSquares forButtonPressed:buttonPressed];
     if (horizontalCheck) {
         return YES;
     }
+    
+    //runs a vertical check
+    BOOL verticalCheck = [self verticalWinnerCheck:selectedSquares forButtonPressed:buttonPressed];
+    if (verticalCheck) {
+        return YES;
+    }
+    
     
     return NO;
 }
@@ -205,12 +214,12 @@ int countToWin = 3;
     int numberChecked = [characterLast intValue] + 10;
     NSNumber *numberCheckedNS = [NSNumber numberWithInt:numberChecked];
     
+    //runs through the array and checks if the numbers in the row are in the array
     for (int i = 0; i <= countToWin - 1; i++) {
         if ([selectedSquares containsObject:numberCheckedNS]){
             numberChecked = numberChecked + 10;
             numberCheckedNS = [NSNumber numberWithInt:numberChecked];
-            
-            NSLog(@"this was called once");
+        
         }
         else {
             return NO;
@@ -219,6 +228,27 @@ int countToWin = 3;
     
     
     return YES;
+}
+
+-(BOOL)verticalWinnerCheck: (NSMutableArray *)selectedSquares forButtonPressed: (NSNumber *)buttonPressed {
+    NSString *buttonPressedString = [NSString stringWithFormat:@"%@", buttonPressed];
+    unichar lastChar = [buttonPressedString characterAtIndex:[buttonPressedString length] - 2];
+    NSString *characterFirst= [NSString stringWithFormat:@"%c", lastChar];
+    int numberChecked = ([characterFirst intValue] * 10) + 1;
+    NSNumber *numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+
+    
+    for (int i = 0; i <= countToWin -1; i++) {
+        if ([selectedSquares containsObject:numberCheckedNS]) {
+            numberChecked = numberChecked + 1;
+            numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+        }else {
+            return NO;
+        }}
+        
+        return YES;
+    
+    //runs through the array and checks if the numbers in the row are in the array
 }
 
 
@@ -261,7 +291,7 @@ int countToWin = 3;
     self.xIsCurrentTurn = YES;
     self.currentTurnLabel.text = xIsUp;
     self.currentRound = 0; //setting the round counter to 0 when starting the game
-    NSLog(@"gameReset");
+    
 }
 
 
