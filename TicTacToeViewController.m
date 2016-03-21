@@ -208,6 +208,13 @@ int countToWin = 3;
         return YES;
     }
     
+    //runs a diagonal check from top right to bottom left
+    BOOL diagonalCheckTopRightBottomLeft = [self diagonalTopRightToBottomLeftCheck:selectedSquares forButtonPressed:buttonPressed];
+    if (diagonalCheckTopRightBottomLeft) {
+        return YES;
+    }
+    
+    
     return NO;
 }
 
@@ -274,10 +281,26 @@ int countToWin = 3;
     
     return YES;
     
-
-    
 }
 
+
+-(BOOL)diagonalTopRightToBottomLeftCheck : (NSMutableArray *)selectedSquares forButtonPressed: (NSNumber *)buttonPressed {
+    int numberChecked = countToWin + 10;
+    NSNumber *numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+    
+    
+    for (int i = 0; i <= countToWin -1; i++) {
+        if ([selectedSquares containsObject:numberCheckedNS]) {
+            numberChecked = numberChecked + 9;
+            numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+            
+        }else {
+            return NO;
+        }}
+    
+    return YES;
+    
+}
 
 
 // game reset
