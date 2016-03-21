@@ -202,6 +202,11 @@ int countToWin = 3;
         return YES;
     }
     
+    //runs a diagonal check from top left to bottom right
+    BOOL diagonalCheckTopLeftBottomRight = [self diagnolTopLeftToBottomrightCheck:selectedSquares forButtonPressed:buttonPressed];
+    if (diagonalCheckTopLeftBottomRight) {
+        return YES;
+    }
     
     return NO;
 }
@@ -249,6 +254,28 @@ int countToWin = 3;
         return YES;
     
     //runs through the array and checks if the numbers in the row are in the array
+}
+
+-(BOOL)diagnolTopLeftToBottomrightCheck: (NSMutableArray *)selectedSquares forButtonPressed: (NSNumber *)buttonPressed {
+    int numberChecked = 11;
+    NSNumber *numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+    
+    
+    for (int i = 0; i <= countToWin -1; i++) {
+        if ([selectedSquares containsObject:numberCheckedNS]) {
+            NSLog(@"%@ was checked",numberCheckedNS);
+            NSLog(@"%@", selectedSquares);
+            numberChecked = numberChecked + 11;
+            numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+
+        }else {
+            return NO;
+        }}
+    
+    return YES;
+    
+
+    
 }
 
 
