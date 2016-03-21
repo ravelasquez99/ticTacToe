@@ -103,7 +103,14 @@ int countToWin = 3;
 -(void)showWinner:(NSString *)winner{
     UIAlertController *alert = [UIAlertController alertControllerWithTitle: [NSString stringWithFormat:@"%@ won the game!", winner] message:nil preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {[self gameReset];
+                                                          handler:^(UIAlertAction * action) {
+                                                              if (countToWin == 3) {
+                                                                  [self threeByThreeGame];
+                                                              }else if (countToWin ==4){
+                                                                  [self fourByFourGame];
+                                                              } else {
+                                                                  [self fiveByFiveGame];
+                                                              }
                                                           }];
     [alert addAction:defaultAction];
     [self presentViewController:alert animated:YES completion:nil];
@@ -135,7 +142,9 @@ int countToWin = 3;
         self.xIsCurrentTurn = NO;
         self.currentTurnLabel.text = OIsUp;
         BOOL isThereAWinner = [self checkWinnerInArray:self.xArray forButtonPressed:numberEntered];
-        
+        if (isThereAWinner) {
+            [self showWinner:@"X is the winner"];
+        }
         //[sender setImage:[UIImage imageNamed:@"redX"] forState:UIControlStateNormal];
         [sender setTitle:@"X" forState:UIControlStateNormal];
         
@@ -148,8 +157,9 @@ int countToWin = 3;
         NSNumber *numberEntered = [NSNumber numberWithInt:temp];
         [self.oArray addObject:numberEntered];
          BOOL isThereAWinner = [self checkWinnerInArray:self.oArray forButtonPressed:numberEntered];
-        //NSLog(@"%@", self.oArray);
-        
+        if (isThereAWinner) {
+            [self showWinner:@"O is the winner"];
+        }
        
          //[sender setImage:[UIImage imageNamed:@"blueO"] forState:UIControlStateNormal];
         
@@ -179,7 +189,10 @@ int countToWin = 3;
 
 -(BOOL)checkWinnerInArray: (NSMutableArray *)selectedSquares forButtonPressed:(NSNumber*)buttonPressed {
     
-    [self horizontalWinnerCheck:selectedSquares forButtonPressed:buttonPressed];
+    BOOL horizontalCheck = [self horizontalWinnerCheck:selectedSquares forButtonPressed:buttonPressed];
+    if (horizontalCheck) {
+        return YES;
+    }
     
     return NO;
 }
@@ -189,18 +202,33 @@ int countToWin = 3;
     NSString *buttonPressedString = [NSString stringWithFormat:@"%@", buttonPressed];
     unichar lastChar = [buttonPressedString characterAtIndex:[buttonPressedString length] - 1];
     NSString *characterLast = [NSString stringWithFormat:@"%c", lastChar];
-    int rowNumber = [characterLast intValue];
-    NSLog(@"%i", rowNumber);
+    int numberChecked = [characterLast intValue] + 10;
+    NSNumber *numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+    
+    for (int i = 0; i <= countToWin - 1; i++) {
+        if ([selectedSquares containsObject:numberCheckedNS]){
+            numberChecked = numberChecked + 10;
+            numberCheckedNS = [NSNumber numberWithInt:numberChecked];
+            
+            NSLog(@"this was called once");
+        }
+        else {
+            return NO;
+        }
+    }
     
     
-    
-    return NO;
+    return YES;
 }
 
 
 
 // game reset
 -(void)gameReset {
+    
+    self.xArray = [NSMutableArray new];
+    self.oArray = [NSMutableArray new];
+    
     [self.button1 setTitle:@"11" forState:UIControlStateNormal];
     [self.button2 setTitle:@"21" forState:UIControlStateNormal];
     [self.button3 setTitle:@"31" forState:UIControlStateNormal];
